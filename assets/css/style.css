@@ -529,7 +529,7 @@ section {
 .services .image {
   background-position: center center;
   background-repeat: no-repeat;
-  background-size:contain;
+  background-size: contain;
   min-height: 300px;
 }
 
@@ -1234,7 +1234,7 @@ section {
 # Pricing
 --------------------------------------------------------------*/
 #pricing .row .col {
-  display:flex;
+  display: flex;
 }
 
 #pricing .row .box {
@@ -1329,8 +1329,57 @@ section {
   color: #fff;
 }
 
+#burst {
+  background: #00bf63;
+  width: 60px;
+  height: 60px;
+  position: relative;
+  text-align: center;
+  right: -80%;
+  z-index: 3;
+}
+#burst:before,
+#burst:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 60px;
+  width: 60px;
+  background: #00bf63;
+}
+#burst:before {
+  transform: rotate(30deg);
+}
+#burst:after {
+  transform: rotate(60deg);
+}
+
+#burst span {
+  color: #fff;
+  z-index: 5;
+  position: relative;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  top: 6px;
+}
+
+@media screen and (max-width: 768px) {
+  #burst {
+    right: -80%;
+  }
+  
+}
+
 .pricing .recommended {
   border-color: #00bf63;
+}
+
+.pricing .recommended strike {
+  color: #00bf63;
 }
 
 .pricing .recommended .btn-buy {
@@ -1612,7 +1661,6 @@ section {
   font-size: 14px;
   position: relative;
 }
-
 
 #footer .footer-top {
   position: relative;
