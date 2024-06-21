@@ -457,6 +457,10 @@ section {
   padding-bottom: 40px;
 }
 
+#contact .section-title {
+  padding-bottom: 0;
+}
+
 .section-title h2 {
   font-size: 32px;
   font-weight: bold;
@@ -474,6 +478,7 @@ section {
 /*--------------------------------------------------------------
 # About Us
 --------------------------------------------------------------*/
+
 .about .image {
   padding: 20px;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
@@ -1340,7 +1345,7 @@ section {
 }
 #burst:before,
 #burst:after {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   right: 0;
@@ -1371,7 +1376,6 @@ section {
   #burst {
     right: -80%;
   }
-  
 }
 
 .pricing .recommended {
@@ -1504,10 +1508,10 @@ section {
   color: #484848;
 }
 
-.contact .info .email,
+/* .contact .info .email,
 .contact .info .phone {
   margin-top: 40px;
-}
+} */
 
 .contact .info .email:hover i,
 .contact .info .address:hover i,
@@ -1760,7 +1764,10 @@ section {
   border-top: 1px solid #222222;
   z-index: 2;
   position: relative;
-  bottom: 60px;
+}
+
+#footer .footer-bottom span {
+  color: #00bf63;
 }
 
 #footer .copyright {
