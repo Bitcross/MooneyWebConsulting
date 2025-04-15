@@ -561,7 +561,6 @@
         </div>
     
         <div class="row text-center">
-          <!-- Repeat for each pricing plan -->
           <div class="col-md-4 mb-4">
             <div class="card h-100 shadow-sm">
               <div class="card-body">
@@ -585,7 +584,6 @@
               <div class="card-body">
                 <h5 class="card-title">Growth Package</h5>
                 <h6 class="card-price fw-bold brand-green price" data-onetime="5000" data-monthly="450">$5,000<span class="fs-6 price-unit"> one-time</span></h6>
-                <span class="badge bg-brand-green mb-3">Most Popular</span>
                 <p class="text-muted">Perfect for: Businesses ready to scale</p>
                 <ul class="list-unstyled my-4">
                   <li>✅ Everything in Essential</li>
@@ -625,38 +623,41 @@
           <a href="#contact" class="btn-get-started scrollto mx-auto text-center">Schedule Your Free Consultation</a>
         </div>
       </div>
-
+    
       <script>
-        const toggle = document.getElementById('billingToggle');
-        toggle.addEventListener('change', () => {
+        document.addEventListener("DOMContentLoaded", function () {
+          const toggle = document.getElementById('billingToggle');
           const prices = document.querySelectorAll('.price');
           const supportItems = document.querySelectorAll('.support-feature');
-      
-          prices.forEach(price => {
-            const oneTime = price.dataset.onetime;
-            const monthly = price.dataset.monthly;
-            const unit = toggle.checked ? '/mo' : ' one-time';
-      
-            price.classList.add('fade-out');
-            setTimeout(() => {
-              price.innerHTML = `$${toggle.checked ? monthly : oneTime}<span class="fs-6 price-unit">${unit}</span>`;
-              price.classList.remove('fade-out');
-              price.classList.add('fade-in');
-              setTimeout(() => price.classList.remove('fade-in'), 300);
-            }, 200);
-          });
-      
-          supportItems.forEach(item => {
-            if (toggle.checked) {
-              item.classList.remove('struck');
-            } else {
-              item.classList.add('struck');
-            }
+    
+          // Set initial strike-through for one-time pricing
+          supportItems.forEach(item => item.classList.add('struck'));
+    
+          toggle.addEventListener('change', () => {
+            const isMonthly = toggle.checked;
+    
+            prices.forEach(price => {
+              const oneTime = price.dataset.onetime;
+              const monthly = price.dataset.monthly;
+              const unit = isMonthly ? '/mo' : ' one-time';
+    
+              price.classList.add('fade-out');
+              setTimeout(() => {
+                price.innerHTML = `$${isMonthly ? monthly : oneTime}<span class="fs-6 price-unit">${unit}</span>`;
+                price.classList.remove('fade-out');
+                price.classList.add('fade-in');
+                setTimeout(() => price.classList.remove('fade-in'), 300);
+              }, 200);
+            });
+    
+            supportItems.forEach(item => {
+              item.classList.toggle('struck', !isMonthly);
+            });
           });
         });
       </script>
-      
     </section>
+          
 
     
 
