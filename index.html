@@ -546,82 +546,119 @@
     </section> --><!-- End Team Section -->
 
     <!-- ======= Pricing Section ======= -->
-    <section id="pricing" class="pricing section-bg">
+    <section id="pricing-toggle" class="pricing section-bg">
       <div class="container">
-
-        <div class="section-title" data-aos="fade-up">
-          <h2>Monthly Website Support Plans</h2>
-          <p>More than a website - ongoing strategy, content, and results from a local team who gets it. <br>
-          Most agencies charge $1,200-$2,000/mo for similar support. We offer better value with real people you can trust.</p>
-        </div>
-
-        <div class="row text-center">
-      
-          <!-- Starter Plan -->
-      <div class="col-md-4 mb-4">
-        <div class="card h-100 shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title">Starter Site Care</h5>
-            <h6 class="card-price fw-bold brand-green">$250<span class="fs-6">/mo</span></h6>
-            <p class="text-muted">Perfect for: Light updates & peace of mind</p>
-            <ul class="list-unstyled my-4">
-              <li>✅ Website Design & Updates (up to 2 hrs/month)</li>
-              <li>✅ Website Maintenance & Support</li>
-              <li>✅ Monthly Site Health Check</li>
-              <li>✅ Email Support</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- Local Growth Plan -->
-      <div class="col-md-4 mb-4">
-        <div class="card h-100 shadow border-2 border-brand-green">
-          <div class="card-body">
-            <h5 class="card-title">Local Growth</h5>
-            <h6 class="card-price fw-bold brand-green">$500<span class="fs-6">/mo</span></h6>
-            <span class="badge bg-brand-green mb-3">Most Popular</span>
-            <p class="text-muted">Perfect for: Growing your visibility & engagement</p>
-            <ul class="list-unstyled my-4">
-              <li>✅ Everything in Starter</li>
-              <li>✅ Local SEO & Google Visibility</li>
-              <li>✅ Website Copywriting (1 page/month)</li>
-              <li>✅ Social Media Content (12 posts/month)</li>
-              <li>✅ Graphic Design & Branding Support for print & digital</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- Digital Pro Plan -->
-      <div class="col-md-4 mb-4">
-        <div class="card h-100 shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title">Digital Pro</h5>
-            <h6 class="card-price fw-bold brand-green">$950<span class="fs-6">/mo</span></h6>
-            <p class="text-muted">Perfect for: Full digital support & strategy</p>
-            <ul class="list-unstyled my-4">
-              <li>✅ Everything in Local Growth</li>
-              <li>✅ 20+ Social Posts/month</li>
-              <li>✅ Custom Landing Pages</li>
-              <li>✅ Monthly Strategy Call</li>
-              <li>✅ Priority Support + Unlimited Edits</li>
-            </ul>
-            
-          </div>
-        </div>
-      </div>
+        <div class="section-title text-center mb-4">
+          <h2>Website Packages</h2>
+          <p class="text-muted">Choose what works best: a one-time build or ongoing monthly support</p>
     
+          <!-- Toggle Switch -->
+          <div class="form-check form-switch d-inline-flex align-items-center gap-2 justify-content-center mt-3">
+            <label class="form-check-label fw-bold" for="billingToggle">One-Time</label>
+            <input class="form-check-input" type="checkbox" id="billingToggle" role="switch">
+            <label class="form-check-label fw-bold" for="billingToggle">Monthly</label>
+          </div>
         </div>
+    
+        <div class="row text-center">
+          <!-- Repeat for each pricing plan -->
+          <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title">Essential Website</h5>
+                <h6 class="card-price fw-bold brand-green price" data-onetime="2500" data-monthly="250">$2,500<span class="fs-6 price-unit"> one-time</span></h6>
+                <p class="text-muted">Perfect for: Clean, simple websites that convert</p>
+                <ul class="list-unstyled my-4">
+                  <li>✅ 5-page Custom Design</li>
+                  <li>✅ Mobile-Friendly & SEO Ready</li>
+                  <li>✅ Launch Support</li>
+                  <li class="support-feature">✅ Ongoing Edits & Maintenance (2 hrs/mo)</li>
+                  <li class="support-feature">✅ Monthly Site Health Check</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- Add Growth and Pro packages here the same way -->
+           <!-- Pro Package -->
+          <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow border-2 border-brand-green">
+              <div class="card-body">
+                <h5 class="card-title">Growth Package</h5>
+                <h6 class="card-price fw-bold brand-green price" data-onetime="5000" data-monthly="450">$5,000<span class="fs-6 price-unit"> one-time</span></h6>
+                <span class="badge bg-brand-green mb-3">Most Popular</span>
+                <p class="text-muted">Perfect for: Businesses ready to scale</p>
+                <ul class="list-unstyled my-4">
+                  <li>✅ Everything in Essential</li>
+                  <li>✅ SEO & Copywriting Included</li>
+                  <li>✅ Google Business Setup</li>
+                  <li class="support-feature">✅ 12 Social Media Posts / Month</li>
+                  <li class="support-feature">✅ Email Support</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Digital Pro -->
+          <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title">Digital Pro</h5>
+                <h6 class="card-price fw-bold brand-green price" data-onetime="10000" data-monthly="800">$10,000<span class="fs-6 price-unit"> one-time</span></h6>
+                <p class="text-muted">Perfect for: Full digital strategy & support</p>
+                <ul class="list-unstyled my-4">
+                  <li>✅ Everything in Growth</li>
+                  <li>✅ Landing Pages & Lead Funnels</li>
+                  <li>✅ Branding + Graphic Design</li>
+                  <li class="support-feature">✅ Strategy Calls & Priority Support</li>
+                  <li class="support-feature">✅ Unlimited Website Edits</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- END PACKAGE TEMPLATE -->
+        </div>
+    
         <div class="text-center mt-4">
-          <small class="text-muted">All plans are month-to-month. No contracts. Upgrade, downgrade, or cancel anytime.</small><br>
-          <small>Not sure which plan to choose?</small>
+          <small class="text-muted">One-time projects are 50% upfront, 50% on launch. Monthly plans include ongoing support and cancel anytime.</small>
         </div>
-        <div class="ctabuttons">
-          <a data-aos="fade-up" data-aos-delay="200" href="#contact" class="btn-get-started scrollto mx-auto text-center">Schedule Your Free 30-Minute Consultation</a>
+        <div class="ctabuttons mt-3">
+          <a href="#contact" class="btn-get-started scrollto mx-auto text-center">Schedule Your Free Consultation</a>
         </div>
       </div>
-    </section><!-- End Pricing Section -->
+
+      <script>
+        const toggle = document.getElementById('billingToggle');
+        toggle.addEventListener('change', () => {
+          const prices = document.querySelectorAll('.price');
+          const supportItems = document.querySelectorAll('.support-feature');
+      
+          prices.forEach(price => {
+            const oneTime = price.dataset.onetime;
+            const monthly = price.dataset.monthly;
+            const unit = toggle.checked ? '/mo' : ' one-time';
+      
+            price.classList.add('fade-out');
+            setTimeout(() => {
+              price.innerHTML = `$${toggle.checked ? monthly : oneTime}<span class="fs-6 price-unit">${unit}</span>`;
+              price.classList.remove('fade-out');
+              price.classList.add('fade-in');
+              setTimeout(() => price.classList.remove('fade-in'), 300);
+            }, 200);
+          });
+      
+          supportItems.forEach(item => {
+            if (toggle.checked) {
+              item.classList.remove('struck');
+            } else {
+              item.classList.add('struck');
+            }
+          });
+        });
+      </script>
+      
+    </section>
+
+    
 
     <!-- ======= Lead Magnet ======= -->
 

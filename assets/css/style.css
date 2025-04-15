@@ -1285,6 +1285,33 @@ section {
   color: #999;
 }
 
+.support-feature {
+  transition: all 0.4s ease;
+}
+
+.support-feature.struck {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.price {
+  transition: all 0.4s ease-in-out;
+  display: inline-block;
+}
+
+#billingToggle {
+  margin: 0 5px;
+}
+
+.form-check-input:checked {
+  background-color: #00bf63;
+  border-color: #00bf63;
+}
+
+.form-check-input:focus {
+  box-shadow: 0 0 0 0.25rem rgba(0, 191, 99, 0.25);
+}
+
 /*--------------------------------------------------------------
 # Lead Magnet
 --------------------------------------------------------------*/
