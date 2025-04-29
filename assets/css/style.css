@@ -381,7 +381,7 @@ h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: url('../img/hero-bg.png');
+  background: url('../img/hero-bg.webp');
   position: relative;
 }
 
@@ -1072,7 +1072,7 @@ section {
 --------------------------------------------------------------*/
 .testimonials {
   padding: 60px 0;
-  background: url('../img/testimonials-bg.jpg') no-repeat;
+  background: url('../img/testimonials-bg.webp') no-repeat;
   background-position: center center;
   background-size: cover;
   position: relative;
@@ -1322,6 +1322,72 @@ section {
   box-shadow: 0 0 0 0.25rem rgba(0, 191, 99, 0.25);
 }
 
+.rounded-corners {
+  border-radius: 25px;
+}
+
+.object-fit-cover {
+  object-fit: cover;
+  height: 90%;
+}
+
+@media (max-width: 1400px) {
+  .join-image-container {
+    display: none !important;
+  }
+}
+
+.pulse {
+  animation: pulse 2s infinite;
+  background-color: #d1f7d1 !important; /* Light green background */
+  color: #0f5132 !important; /* Deep green text for contrast */
+  box-shadow: 0 0 10px rgba(0, 191, 99, 0.5);
+  border-radius: 0.5rem; /* Optional: a little more rounded */
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.05); opacity: 0.9; }
+  100% { transform: scale(1); opacity: 1; }
+}
+.best-value-banner {
+  position: absolute;
+  top: 12px;
+  right: -35px;
+  background: #00bf63;
+  color: white;
+  font-weight: bold;
+  font-size: 0.75rem;
+  padding: 5px 20px;
+  transform: rotate(45deg);
+  z-index: 10;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 5%;
+}
+
+.best-value-banner::before,
+.best-value-banner::after {
+  content: "";
+  position: absolute;
+  border-style: solid;
+  border-width: 5px;
+  height: 0;
+  width: 0;
+}
+
+.best-value-banner::before {
+  top: 100%;
+  left: 0;
+  border-color: #007a43 transparent transparent transparent;
+}
+
+.best-value-banner::after {
+  top: 100%;
+  right: 0;
+  border-color: #007a43 transparent transparent transparent;
+}
 /*--------------------------------------------------------------
 # Lead Magnet
 --------------------------------------------------------------*/
@@ -1538,7 +1604,7 @@ section {
   max-width: 100%;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1000px) {
   .contactimg {
     display: none;
   }
@@ -1604,7 +1670,7 @@ section {
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  background: url('../img/hero-bg.png');
+  background: url('../img/hero-bg.webp');
   color: #fff;
   font-size: 14px;
   position: relative;

@@ -250,3 +250,16 @@
   });
 
 })()
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const observer = new IntersectionObserver(entries => {
+    if (entries[0].isIntersecting) {
+      const script = document.createElement('script');
+      script.src = 'https://assets.calendly.com/assets/external/widget.js';
+      document.body.appendChild(script);
+      observer.disconnect();
+    }
+  });
+  observer.observe(document.querySelector('.calendly-inline-widget'));
+});
