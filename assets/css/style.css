@@ -424,28 +424,21 @@ h6 {
   align-items: center;
 }
 .btn-get-started {
-  font-family: 'Montserrat', sans-serif;
-  text-transform: uppercase;
-  font-weight: 400;
-  font-size: 16px;
-  letter-spacing: 1px;
-  display: inline-block;
-  padding: 14px 30px;
-  border-radius: 3px;
-  margin: 10px;
+  background: #00c26e;
   color: #fff;
-  background: #00bf63;
+  font-weight: 600;
+  padding: 0.9rem 2rem;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.95rem;
+  text-align: center;
 }
 
-#hero .btn-get-started:hover {
-  transition: 0.5s;
-  background: #fff;
-  color: #00bf63;
-}
 .btn-get-started:hover {
-  color: #00bf63;
-  background-color: #fff;
-  border: #00bf63 2px solid;
+  color: #fff;
+  background: #009e59;
 }
 
 @media (min-width: 1024px) {
@@ -507,6 +500,64 @@ section {
   color: #aeaeae;
 }
 
+.home {
+  background: #f9f9f9;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.home .row {
+  align-items: center;
+  min-height: auto;
+}
+.home .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 2rem 0;
+}
+.home .content h1 {
+  font-size: 2.75rem;
+  font-weight: 600;
+  color: #222;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+.home .content p {
+  font-size: 1.125rem;
+  color: #444;
+  line-height: 1.6;
+  max-width: 500px;
+}
+.home .ctabuttons {
+  margin-top: auto;
+}
+
+.home .image img {
+  border-radius: 1rem;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  max-height: 400px;
+  max-width: 650px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+#pain-point {
+  padding: 60px 0;
+}
+
+#pain-point h2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #222;
+}
+
+#pain-point .lead {
+  font-size: 1.15rem;
+  color: #555;
+  line-height: 1.6;
+}
 /*--------------------------------------------------------------
 # About Us
 --------------------------------------------------------------*/
@@ -556,6 +607,7 @@ section {
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
+
 .services .icon-box h4 {
   font-size: 20px;
   font-weight: 700;
@@ -578,6 +630,18 @@ section {
   font-size: 15px;
   color: #959595;
   margin-left: 60px;
+}
+
+.text-brand {
+  color: #00bf63;
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
+.shadow-sm {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
 /*--------------------------------------------------------------
@@ -1071,11 +1135,12 @@ section {
 # Testimonials
 --------------------------------------------------------------*/
 .testimonials {
-  padding: 60px 0;
-  background: url('../img/testimonials-bg.webp') no-repeat;
-  background-position: center center;
+  background: url('../img/testimonials-bg.webp') no-repeat center center;
   background-size: cover;
-  position: relative;
+  width: 100%;
+  color: #fff;
+  padding-top: 20px;
+  padding-bottom: 0;
 }
 
 .testimonials::before {
@@ -1088,27 +1153,10 @@ section {
   background: rgba(0, 0, 0, 0.1);
 }
 
-.testimonials .quote-icon {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.testimonials .quote-icon i {
-  color: #00bf63;
-  font-size: 24px;
-  padding: 18px;
-  border-radius: 50px;
-  border: 2px solid #00bf63;
-}
-
-.testimonials .testimonials-carousel,
-.testimonials .testimonials-slider {
-  overflow: hidden;
-}
-
 .testimonials .testimonial-item {
   text-align: center;
-  color: #fff;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .testimonials .testimonial-item p {
@@ -1129,12 +1177,10 @@ section {
   font-size: 20px;
   font-weight: bold;
   margin: 10px 0 5px 0;
-  color: #fff;
 }
 
 .testimonials .testimonial-item h4 {
   font-size: 14px;
-  color: #ddd;
   margin: 0 0 15px 0;
 }
 
@@ -1346,9 +1392,18 @@ section {
 }
 
 @keyframes pulse {
-  0% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(1.05); opacity: 0.9; }
-  100% { transform: scale(1); opacity: 1; }
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 .best-value-banner {
   position: absolute;
@@ -1361,7 +1416,7 @@ section {
   padding: 5px 20px;
   transform: rotate(45deg);
   z-index: 10;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   text-transform: uppercase;
   letter-spacing: 1px;
   border-radius: 5%;
@@ -1369,7 +1424,7 @@ section {
 
 .best-value-banner::before,
 .best-value-banner::after {
-  content: "";
+  content: '';
   position: absolute;
   border-style: solid;
   border-width: 5px;
@@ -1391,6 +1446,12 @@ section {
 /*--------------------------------------------------------------
 # Lead Magnet
 --------------------------------------------------------------*/
+.join-image-container img {
+  object-fit: cover;
+  height: 100%; /* Ensure it stretches vertically */
+  width: 100%; /* And fills horizontally */
+  min-height: 500px; /* Ensure a minimum height */
+}
 
 .lead-magnet {
   background: #f8f9fa;
